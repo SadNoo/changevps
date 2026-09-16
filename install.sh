@@ -125,8 +125,8 @@ HTTP_CODE="$(
     curl --silent \
         --output /dev/null \
         --write-out '%{http_code}' \
-        --connect-timeout 10 \
-        --max-time 30 \
+        --connect-timeout 600 \
+        --max-time 600 \
         "$CHANGEIP_URL" 2>/dev/null
 )"
 CURL_STATUS=$?
